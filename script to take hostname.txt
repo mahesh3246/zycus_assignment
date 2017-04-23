@@ -1,0 +1,11 @@
+#!/bin/bash
+# Date: 23.04.2017
+# Author: Mahesh Singh
+#Purpose to get all server details
+
+###Variables### 
+echo "Enter Command:"
+read variable_name
+
+###For Loop###
+for f in `cat ip.txt`; do ssh mahesh@$f $variable_name; done >> hostname.txt

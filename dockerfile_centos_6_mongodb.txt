@@ -1,0 +1,15 @@
+#Pulling base image from Docker hub repository.
+FROM centos:centos6
+
+#Author
+MAINTAINER Mahesh Singh, mahesh.3246@gmail.com
+
+#Install MongoDB Server
+RUN yum -y update; yum clean all
+RUN yum -y install epel-release; yum clean all
+RUN yum -y install mongodb-server; yum clean all
+RUN mkdir -p /data/db
+
+#expose mongoDB port 
+EXPOSE 27017
+ENTRYPOINT ["/usr/bin/mongod"]
