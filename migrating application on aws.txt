@@ -1,0 +1,55 @@
+In Order to Migrate monolithic java application stack to AWS.
+
+###### Check Exsiting Hardware######
+Existing Server details.
+ex:- hardware ram,cpu,& hard disk. to calculate what will be the server requirement on AWS to run the application smoothly.
+
+###### Choose proper AWS Server for Migration & create testing Env ###### 
+after getting the server requirement, we can choose the proper server on AWS for migration.
+if our existing application is on VM so we can create a testing environment on AWS from VM Import/Export to import virtual machine to EC2 Instance.
+
+
+###### Migration ###### 
+We can start with apache web server, Apache tomcat with active MQ, we can create a EC2 Instance with VPC & EBS storage and check the server with few hits & configure the database on testing environment which we have imported from vm
+for DB migration, oracle & mongoDB what we can do is we can use aws rds for oracle & 1 ec2 instance for mongoDB.
+we can use aws database migration service for oracle to rds or we can simply create 2 ec2 instance for oracle & mongoDB & dump data in ec2 instance.
+
+###### load balancing ###### 
+we can use AWS Elastic Load Balancers.
+
+###### High Availability ######
+We can set cloudwatch monitoring for high availabilty.
+
+AWS Services to use for Migration.
+1) EC2 
+2) S3
+3) EBS
+4) VPC
+5) RDS
+6) Cloud Watch
+7) IAM
+8) ELB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
